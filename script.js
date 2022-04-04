@@ -19,6 +19,8 @@ startButton.addEventListener("click",startGame)
 nextButton.addEventListener('click',() => {
     currentQuestionIndex++
     setnextQuestion();
+    
+
 
 })
 
@@ -37,6 +39,7 @@ function startGame(){
     randomQuestions =questions.sort(() =>Math.random()-0.5)
     currentQuestionIndex = 0;
     questionContainerElement.classList.remove("hide");
+    nextButton.classList.remove("hide");
     setnextQuestion();
     quizScore = 0;
     startTimer();
@@ -68,7 +71,7 @@ function showQuestion(question){
 
 function resetState() {
     clearStatusClass(document.body)
-    nextButton.classList.add("hide")
+    // nextButton.classList.add("hide")
     while(answerBtnElement.firstChild){
         answerBtnElement.removeChild(answerBtnElement.firstChild)
     }
@@ -86,7 +89,7 @@ function selectAnswer(e){
        setStatusClass(button,button.dataset.correct)
    })
    if(randomQuestions.length > currentQuestionIndex + 1){
-     nextButton.classList.remove["hide"]
+     nextButton.classList.remove("hide")
 
    } else{
        startButton.innerText="Restart"
