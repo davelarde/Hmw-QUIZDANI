@@ -1,0 +1,111 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body{
+    
+    background-image:url("https://assets.traveltriangle.com/blog/wp-content/uploads/2017/12/Krabi.jpg");
+background-size:cover;
+padding: 0;
+margin:0;
+
+}
+body.correct{
+    color:aqua
+}
+body.wrong{
+    color:red;
+}
+
+
+h1{
+    display:flex;
+    justify-content:center;
+    color:white;
+}
+p{
+    display:flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    padding:20px;
+    color:white;
+}
+.container{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding:200px;
+    border: 5px solid blue;
+    background-color:transparent;
+
+}
+.answer-buttons{
+    display: flex;
+    flex-direction: column;
+    
+}
+.btn-grid{
+    display:grid;
+    grid-template-columns: repeat(1,auto);
+    gap: 10px;
+    margin:20px 0;
+}
+.btn{
+    background-color: darkcyan;
+    border:1px solid black 100%, 30%;
+    border-radius:40px;
+    padding: 5px 10px;
+    color:white;
+    font-weight:bolder;
+    outline:none;
+    cursor:pointer;
+
+}
+.btn :hover{
+    border-color:blue;
+    transition:ease-in-out; 
+
+}
+.start-button{
+font: size 1.5rea;
+font-weight:bold;
+padding: 10px 20px;
+cursor:pointer;
+background-color:darkblue;
+color: white;
+}
+.next-button{
+    font: size 1.5rea;
+font-weight:bold;
+padding: 10px 20px;
+cursor:pointer;
+background-color: darkblue;
+color: white;
+
+
+}
+
+#question{
+    color:blue;
+    font-weight:bolder;
+
+}
+.timebox p{
+    color:blue;
+    font-weight:bolder
+}
+
+.control{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    padding:20px;
+
+}
+.hide{
+    display:none;
+}
