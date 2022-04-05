@@ -38,8 +38,8 @@ p{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding:200px;
-    border: 5px solid blue;
+    padding:150px;
+    border: 5px solid transparent;
     background-color:transparent;
 
 }
@@ -94,9 +94,43 @@ color: white;
     font-weight:bolder;
 
 }
+.score{
+    display:flex;
+    justify-content: flex-start;
+    padding:40px;
+}
+#right-answers{
+    display:flex;
+    flex-wrap: wrap;
+}
+aside h4{
+    color:blue;
+    display:flex;
+    justify-content:flex-start;
+}
+aside{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 .timebox p{
     color:blue;
-    font-weight:bolder
+    font-style: italic;
+    font-size: medium;
+    font-weight:bolder;
+    padding-left: 40px;
+    border: 12px;
+    display: flexbox;
+    justify-content: flex-end;
+
+}
+h3{
+    color: blue;
+    font-weight: bolder;
+}
+#getname{
+    background-color: darkcyan;
+    color:white;
 }
 
 .control{

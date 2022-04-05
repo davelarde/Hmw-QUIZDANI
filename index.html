@@ -13,7 +13,7 @@
         <p>Welcome to our Travel Quiz, this is a multiple choice quiz.
              Whenever you are ready to answer just click on the right answer follow by the button "next". Your time keeps running while you answer the questions.
               Remember to click next,so you don't run out of time!
-            Your score will be located on the top-left side of your screen! 
+            Your score will be shown on the bottom  of your screen! 
         GOOD LUCK!
     BON VOYAGE!</p>
     </header>
@@ -29,14 +29,20 @@
         </div>
         <div class="controls">
             <button id="start-btn" class="start-btn btn">START</button>
-            <button id="next-btn" class="next-btn btn  ">NEXT</button>
+            <button id="next-btn" class="next-btn hide btn  ">NEXT</button>
         </div>
     </div>
     <aside>
         <h4>SCORE:</h4>
         <div class="score">
 <span id="right-answers"></span>
-        </div>
+</div>
+<form id="Name" method="post">
+    <h3>Save your results</h3> <input type="text" name="name">
+    <div id="response"></div>
+    <button id="getname">Submit</button>
+</form>
+       
         <div class="timebox">
             <p><span id="timepara">15</span> Seconds left!</p>
         </div>

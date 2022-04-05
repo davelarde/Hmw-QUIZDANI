@@ -4,6 +4,9 @@ var timePara = document.querySelector("#timepara");
 const questionContainerElement = document.querySelector("#question-container");
 const questionElement = document.getElementById('question');
 const answerBtnElement = document.querySelector("#answer-buttons");
+const submitEl =document.querySelector('#getname');
+const nameInput = document.querySelector('#name');
+var submissionResponseEl = document.querySelector('#response');
 let randomQuestions,currentQuestionIndex;
 var timer;
 var timeLeft= 10;
@@ -18,18 +21,24 @@ startButton.addEventListener("click",startGame)
 
 nextButton.addEventListener('click',() => {
     currentQuestionIndex++
-    setnextQuestion();
-    
-
-
+    setnextQuestion(); 
 })
 
+function showResponse(event){
+    var response =" Thank you for playing the travel quiz! to play again click on the restart button" + nameInput.value
+    submissionResponseEl.textContent = response;
+    submitEl.addEventListener('click', submit);
+    submitEl.preventDefault();
+    localStorage.setItem("nameInput", name);
+}
 function startTimer(){
     timer= setInterval(function (){
 timeLeft--;
 timePara.textContent= timeLeft
 if(timeLeft<=0){
     clearInterval(timer);
+    alert('GAME OVER');
+
 }
     },1000)
 }
@@ -43,6 +52,7 @@ function startGame(){
     setnextQuestion();
     quizScore = 0;
     startTimer();
+    localStorage.setItem("quizScore", quizScore);
 }
 
 
@@ -71,7 +81,7 @@ function showQuestion(question){
 
 function resetState() {
     clearStatusClass(document.body)
-    // nextButton.classList.add("hide")
+    nextButton.classList.add("hide")
     while(answerBtnElement.firstChild){
         answerBtnElement.removeChild(answerBtnElement.firstChild)
     }
