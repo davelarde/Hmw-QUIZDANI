@@ -23,6 +23,15 @@ nextButton.addEventListener('click',() => {
     currentQuestionIndex++
     setnextQuestion(); 
 })
+function saveResults(){
+    var resultsName = {
+        nameInput : nameInput.value,
+        quizScore : quizScore.value,
+        submissionResponseEl: submissionResponseEl.value.trim()
+    };
+    localStorage.setItem("score", JSON.stringify(score));
+}
+
 
 function showResponse(event){
     var response =" Thank you for playing the travel quiz! to play again click on the restart button" + nameInput.value
