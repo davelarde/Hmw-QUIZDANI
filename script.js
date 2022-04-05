@@ -37,7 +37,7 @@ timeLeft--;
 timePara.textContent= timeLeft
 if(timeLeft<=0){
     clearInterval(timer);
-    alert('GAME OVER');
+    alert('GAME OVER,PLAY AGAIN!');
 
 }
     },1000)
